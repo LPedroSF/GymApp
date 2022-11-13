@@ -1,0 +1,672 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+li{
+    list-style: none;
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1{
+    font-size: 48px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+h2{
+    font-size: 26px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+h3{
+    font-size: 20px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.container{
+    padding: 24px;
+}
+
+.row{
+    width:100%;
+    max-width: 1200px;
+    margin:0 auto;
+}
+
+.blue{
+    color:#0414c9;
+}
+
+.tittle{
+    margin: 24px;
+    font-size: 32px;
+}
+
+.img {
+    width: 100%;
+}
+
+.link__hover-effect{
+    position: relative;
+}
+  
+.link__hover-effect::before{
+    content:"";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: -2px;  
+    left: 0;
+    transform: scale(0);
+    transition: all 300ms ease;
+}
+  
+.link__hover-effect:hover::before{
+    transform: scale(1);
+}
+  
+.link__hover-effect--white::before{
+    background-color: white;
+}
+  
+.link__hover-effect--black::before{
+    background-color: black;
+}
+
+.click{
+    cursor: pointer;
+}
+
+button{
+    cursor: pointer;
+}
+
+button:active{
+    transform: translateY(1px);
+}
+
+/* 
+    Navigation
+*/
+nav{
+    background: linear-gradient(black, transparent);
+    height: 100px;
+    width: 100%;
+    margin:0 auto;
+    padding: 0 64px; 
+    transition: 250ms ease-in-out;
+}
+
+nav:hover{
+    background-color:#2c28285e;
+}
+
+.nav__container{
+    padding: 8px 32px; 
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo{
+    width: 75px;
+}
+
+.nav__link {
+    margin: 0 16px;
+}
+  
+.nav__link--list{
+    display: flex;
+}
+  
+.nav__link--anchor{
+    color:white;
+    font-weight: bold;
+}
+
+.button{
+    background-color: #0414c9;
+    color:white;
+    padding: 8px 24px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 4px;
+    border: none;
+}
+
+.button__menu{
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    color: white;
+    display: none;
+}
+
+.menu__drop{
+    background-color: #2c2828;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 100ms ease-in;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.menu--open .menu__drop{
+    visibility: visible;
+    opacity: 1;
+}
+
+.menu--open{
+    max-height: 100vh;
+    overflow-y: hidden;
+}
+
+.button__menu--closed{
+    color: white;
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+
+.menu__links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu__list{
+    padding: 16px;
+}
+
+.menu__link{
+    font-size:24px;
+    color: white;
+    text-decoration: none;
+}
+
+/*
+    Landing 
+*/
+#landing{
+    background-image: url("assets/background.png");
+    background-repeat: no-repeat;
+    background-size:auto;
+    background-position: center center;
+    color: white;
+}
+
+.landing{
+    width: 100%;
+    
+    min-height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.landing__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 
+    Promotion Section
+*/
+
+#promo{
+    background-color: #dbd8d8;
+    margin: 8px;
+}
+
+.promo__wrapper{
+    display: flex;
+}
+
+.promo{
+    padding:24px;
+    width: CALC(100%/3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border:#0414c9 solid 4px;
+    margin: 8px;
+    border-radius: 4px;
+}
+
+.promo__imgs{
+    font-size: 25px;
+    text-align: center;
+    width: 48px;
+    height: 48px;
+}
+
+.promo__subtittle{
+    font-size: 20px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.promo__description{
+    text-align: center;
+}
+
+/*
+    memberships
+*/
+#memberships{
+    background-color: #dbd8d8;
+    margin: 8px;
+}
+
+.memberships{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.membership__wrapper{
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 20px 80px 0 black;
+    width: 30%;
+}
+
+.membership__wrapper:hover .membership__wrapper--bg{
+    opacity: 0.85;
+}
+
+.membership__wrapper--bg{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2c2828;
+    opacity: 0;
+    transition: all 400ms ease;
+    border: solid 2px #0414c9;
+}
+
+.membership__wrapper:hover .membership__description{
+    opacity: 1;
+    transform: translate(-50%);
+}
+
+.membership__description{
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%);
+    opacity: 0;
+    transition: opacity 300ms transform 450ms ease;
+    color: #ffffff;
+}
+
+.membership__img{
+    width: 100%;
+    transition: all 300ms ease;
+    border-radius: 20px;
+}
+
+.membership__wrapper:hover .membership__img{
+    filter: blur(5px);
+    transform: scale(1.05);
+}
+  
+.membership__description--tittle{
+    font-size: 35px;
+}
+  
+.membership__description--subtittle{
+    font-size: 20px;
+}
+  
+.membership__description--para{
+    margin: 16px 0;
+    line-height: 1.8;
+}
+
+
+/*
+    Membership
+*/
+.blink{
+    animation: blinker 2s linear infinite;
+}
+
+@keyframes blinker {
+    50%{
+        opacity: 0;
+    }
+}
+
+.membership__page{
+    display: flex;
+    justify-content: space-around;
+}
+
+.membership__page--wrapper{
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 20px 80px 0 black;
+    width: 30%;
+    border: #0414c9 solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;;
+}
+
+.membership__page--img{
+    width: 100%;
+    transition: all 300ms ease;
+    border-bottom: solid 3px #0414c9;
+    min-height: 354px;
+}
+
+.membership__page--description{
+    text-align: center;
+    width: 100%;
+    padding: 16px;
+}
+
+.membership__page--button{
+    background-color: #0414c9;
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+
+/*
+    Basket
+*/
+#basket{
+    height: 100vh;
+}
+.basket__tittle{
+    text-align: left;
+}
+
+.basket__header{
+    background-color: #2c2828;
+    color:white;
+    padding: 4px 16px;
+    display: flex;
+}
+
+.basket__memb{
+    width: 70%;
+}
+
+.basket__price{
+    width: 15%;
+}
+
+.basket__item{
+    margin: 24px;
+    display: flex;
+    align-items: center;
+    padding-right: 16px;
+}
+
+.basket__item--info{
+    display: flex;
+}
+
+.basket__img{
+    max-width: 160px;
+    width: 100%;
+}
+
+.basket__item--name{
+    display: flex;
+    padding: 24px;
+    width: 60%;
+}
+
+.basket__item--img{
+    position: static;
+    width: 160px;
+    margin-right: 24px;
+}
+
+.basket__item--price{
+    width: 25%;
+    padding: 4px 16px;
+}
+
+.basket__remove--button{
+    background-color: white;
+    border: 2px solid;
+    font-size: 20px;
+    padding: 8px 16px;
+}
+
+.total{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 24px;
+    max-width:300px;
+    width: 100%;
+    margin-left: auto;
+    font-size: 20px;
+}
+
+.total__item{
+    margin-bottom: 24px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.total__button{
+    width: 100%;
+    font-size: 16px;
+    padding: 4px 0;
+
+}
+
+.no-cursor {
+    cursor: not-allowed;
+}
+
+/*
+    Contact 
+*/
+
+.about__tittle {
+    color:#0414c9;
+}
+
+.about__info{
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.about__img{
+    width: 100%;
+    max-width: 300px;
+}
+
+.about__info--para{
+    font-size: 20px;
+    padding: 16px;
+}
+
+
+/* 
+    Footer 
+*/
+
+#footer{
+    background-color: #2c2828;
+    color: white;
+    padding: 24px;
+}
+
+.footer__row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer__logo{
+    width: 200px;
+    margin: 8px;
+}
+
+.footer__links {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 32px;
+}
+
+.footer__links--list{
+    color: white;
+}
+
+.footer__text{
+    padding: 8px;
+}
+
+@media (max-width: 800px){
+    .nav__link--list{
+        display: none;
+    }
+    
+    .button__menu{
+        display: block;
+    }
+
+    .header__container{
+        padding: 0 24px;
+    }
+
+    .membership__wrapper{
+        width: 100%;
+        margin:  16px 40px;
+    }
+
+    .memberships{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    h1{
+        font-size: 64px;
+    }
+
+    h3{
+        font-size: 40px;
+    }
+
+    .membership__description--para{
+        font-size: 24px;
+    }
+
+    .membership__page{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 40px;
+        
+    }
+
+    .membership__page--wrapper{
+        width: 100%;
+        margin-top: 16px;
+    }
+}
+
+@media (max-width: 620px){
+    .promo__wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 16px 40px;
+    }
+
+    .promo{
+        width: 100%;
+    }
+
+    h1{
+        font-size: 48px;
+    }
+
+    h3{
+        font-size: 26px;
+    }
+
+    .membership__description--para{
+        font-size: 16px;
+    }
+
+    .basket__price{
+        visibility: hidden;
+    }
+
+    .basket__item{
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 400px){
+    h1{
+        font-size: 32px;
+    }
+    h2{
+        font-size: 18px;
+    }
+
+    h3{
+        font-size: 18px;
+    }
+
+    .membership__description--para{
+        font-size: 14px;
+    }
+
+}
