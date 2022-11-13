@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel = "stylesheet" href = "styles.css">
+  <title>GymApp</title>
+  <script src ="index.js"></script>
+  <script src="https://kit.fontawesome.com/aae1ff0b84.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <nav>
+    <div class="nav__container">
+        <a href = "index.html">
+            <figure>
+                <img class="nav__logo" src ="assets/logo.png">
+            </figure>
+        </a>
+        <ul class = "nav__link--list">
+            <li class="nav__link">
+                <a href ="index.html" class = "
+                nav__link--anchor
+                link__hover-effect
+                link__hover-effect--white
+                ">
+                    Home
+                </a>
+            </li>
+            <li class="nav__link">
+                <a href ="memberships.html" class="
+                nav__link--anchor
+                link__hover-effect
+                link__hover-effect--white
+                ">
+                Membership</a>
+            </li>
+            <li class ="nav__link">
+                <a href ="" onclick ="inProgress()" class="nav__link--anchor">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+            </li>
+        </ul>
+        <button class = "button__menu" onclick = "openMenu();">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="menu__drop">
+            <button class="button__menu button__menu--closed" onclick = "closeMenu();">
+                <i class="fas fa-times"></i>
+            </button>
+            <ul class = "menu__links">
+                <li class="menu__list">
+                  <a href ="index.html" class="
+                  menu__link
+                  link__hover-effect
+                  link__hover-effect--white
+                  ">
+                  Home</a>
+                </li>
+                <li class="menu__list">
+                    <a href ="memberships.html" class = "
+                    menu__link
+                    link__hover-effect
+                    link__hover-effect--white
+                    ">
+                        Memberships
+                    </a>
+                </li>
+                <li class ="menu__list">
+                    <a href ="" onclick="inProgress()" class="
+                    menu__link
+                    link__hover-effect
+                    link__hover-effect--white
+                    ">
+                        Basket
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+  <section id="about">
+    <div class="container">
+      <div class="row">
+        <h1 class = "about__tittle">A little bit of info!</h1>
+        <div class="about">
+          <div class="about__info">
+            <p class = "about__info--para">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              Lacus vestibulum sed arcu non. Ornare arcu odio ut sem nulla pharetra diam sit amet. 
+              Mi in nulla posuere sollicitudin aliquam ultrices sagittis orci a. 
+            </p>
+            <img src="assets/workout.jpg" class ="about__img" />
+          </div>
+          
+          <div class="about__info">
+            <img src="assets/workingout.png" class ="about__img" />
+            <p class= "about__info--para">
+              Vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci. 
+              Nunc sed velit dignissim sodales ut eu sem integer. 
+              Pharetra massa massa ultricies mi quis hendrerit dolor. At risus viverra adipiscing at in tellus integer feugiat. Volutpat lacus laoreet non curabitur gravida arcu ac. 
+              Quam lacus suspendisse faucibus interdum posuere lorem ipsum dolor. Nec ullamcorper sit amet risus nullam eget felis eget.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> 
+  <section id="footer">
+    <div class = "row footer__row">
+        <figure>
+            <img class="footer__logo" src ="assets/logo.png">
+        </figure>
+        <div class = "footer__links">
+            <a href = "index.html" class ="
+            footer__links--list
+            link__hover-effect
+            link__hover-effect--white
+            ">
+            Home</a>
+            <a href = "memberships.html" class ="
+            footer__links--list
+            link__hover-effect
+            link__hover-effect--white
+            ">
+            Memberships</a>
+            <a href = "about.html" class ="
+            footer__links--list
+            link__hover-effect
+            link__hover-effect--white
+            ">
+            About Us</a>
+        </div>
+        <div class = "Footer__text">© Created by Luis Faria</div>
+    </div>
+</section>
+</body>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel = "stylesheet" href = "styles.css">
+  <title>GymApp</title>
+  <script src ="index.js"></script>
+  <script src="https://kit.fontawesome.com/aae1ff0b84.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <section id="landing">
+        <nav>
+            <div class="nav__container">
+                <a href = "index.html">
+                    <figure>
+                        <img class="nav__logo" src ="assets/logo.png">
+                    </figure>
+                </a>
+                <ul class = "nav__link--list">
+                    <li class="nav__link">
+                        <a href ="memberships.html" class = "
+                        nav__link--anchor
+                        link__hover-effect
+                        link__hover-effect--white
+                        ">
+                            Memberships
+                        </a>
+                    </li>
+                    <li class="nav__link">
+                        <a href ="about.html" class="
+                        nav__link--anchor
+                        link__hover-effect
+                        link__hover-effect--white
+                        ">
+                        About us</a>
+                    </li>
+                    <li class ="nav__link">
+                        <a href ="" onclick ="inProgress()" class="nav__link--anchor">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+                    </li>
+                </ul>
+                <button class = "button__menu" onclick = "openMenu();">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="menu__drop">
+                    <button class="button__menu button__menu--closed" onclick = "closeMenu();">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <ul class = "menu__links">
+                        <li class="menu__list">
+                            <a href ="memberships.html" class = "
+                            menu__link
+                            link__hover-effect
+                            link__hover-effect--white
+                            ">
+                                Memberships
+                            </a>
+                        </li>
+                        <li class="menu__list">
+                            <a href ="about.html" class="
+                            menu__link
+                            link__hover-effect
+                            link__hover-effect--white
+                            ">
+                            About us</a>
+                        </li>
+                        <li class ="menu__list">
+                            <a href ="" onclick="inProgress()" class="
+                            menu__link
+                            link__hover-effect
+                            link__hover-effect--white
+                            ">
+                                Basket
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="landing">
+                    <h1>The only personal trainer you will need.</h1>
+                    <h2>Improve your training now!</h2>
+                    <button onclick="window.location.href='memberships.html'" class = "button"> Join us!</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id = "promo">
+        <div class="container">
+            <div class="row">
+                <h2 class = "tittle">So why <span class = "blue">GymApp</span>?</h2>
+                <div class = "promo__wrapper">
+                    <div class="promo">                            
+                        <div class="promo__imgs">
+                            <i class="fa-solid fa-globe"></i>
+                        </div>
+                        <h3 class ="promo__subtittle">Anywhere! Any time!</h3>
+                        <p class = "promo__description">Making sure you never forget your routine!</p>
+                    </div> 
+                    <div class="promo">
+                        <div class="promo__imgs">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <h3 class ="promo__subtittle">TO athlets FROM athlets!</h3>
+                        <p class = "promo__description">Made by athlets to help other athlets.</p>
+                    </div>
+                    <div class="promo">
+                        <div class="promo__imgs">
+                            <i class="fa-solid fa-dumbbell"></i>
+                        </div>
+                        <h3 class ="promo__subtittle">Keep your pregress!</h3>
+                        <p class = "promo__description">Keep record of all your achievements so you can look back</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="memberships">
+        <div class="container">
+            <div class="row">
+                <h2 class = "tittle">Our certified <a href="memberships.html" class = "blue click">memberships</a></h2>
+                <div class="memberships">
+                    <div class = "membership__wrapper">
+                        <a href="memberships.html">
+                            <img class= "membership__img" src = "assets/bench.png" alt="Standard Membership">
+                            <div class="membership__wrapper--bg">
+                                <div class="membership__description">
+                                    <h1 class = "membership__description--tittle">Standard</h1>
+                                    <h3 class = "membership__description--subtittle">This package comes with:</h3>
+                                    <p class = "membership__description--para">Personalised workout plan </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class = "membership__wrapper">
+                        <a href="memberships.html">
+                            <img class= "membership__img" src = "assets/row.png" alt="Gold Membership">
+                            <div class="membership__wrapper--bg">
+                                <div class="membership__description">
+                                    <h1 class = "membership__description--tittle">Gold</h1>
+                                    <h3 class = "membership__description--subtittle">This package comes with:</h3>
+                                    <p class = "membership__description--para">Personalised workout plan.<br> Contact to one of our PT.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class = "membership__wrapper">
+                        <a href="memberships.html">
+                            <img class= "membership__img" src = "assets/squat.png" alt="Premium Membership">
+                            <div class="membership__wrapper--bg">
+                                <div class="membership__description">
+                                    <h1 class = "membership__description--tittle">Premium</h1>
+                                    <h3 class = "membership__description--subtittle">This package comes with:</h3>
+                                    <p class = "membership__description--para">Personalised workout plan.<br> Contact to our PT and nutritionist.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="footer">
+        <div class = "row footer__row">
+            <figure>
+                <img class="footer__logo" src ="assets/logo.png">
+            </figure>
+            <div class = "footer__links">
+                <a href = "#landing" class ="
+                footer__links--list
+                link__hover-effect
+                link__hover-effect--white
+                ">
+                Home</a>
+                <a href = "memberships.html" class ="
+                footer__links--list
+                link__hover-effect
+                link__hover-effect--white
+                ">
+                Memberships</a>
+                <a href = "about.html" class ="
+                footer__links--list
+                link__hover-effect
+                link__hover-effect--white
+                ">
+                About Us</a> 
+            </div>
+            <div class = "Footer__text">© Created by Luis Faria</div>
+        </div>
+    </section>
+</body>
